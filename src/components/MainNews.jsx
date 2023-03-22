@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import FeaturedNews from './FeaturedNews';
+import { GrTopCorner } from 'react-icons/gr'
+
 
 
 const { REACT_APP_API_KEY } = process.env;
@@ -10,7 +11,7 @@ const { REACT_APP_API_KEY } = process.env;
 const MainNews = () => {
     const [news, setNews] = useState({});
 
-    const getArticles = () => {
+    const getArticles = async () => {
         axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${REACT_APP_API_KEY}`)
             .then(res => {
                 setNews(res.data.articles);
@@ -19,6 +20,7 @@ const MainNews = () => {
             })
             .catch(err => console.log(err))
     }
+
 
     useEffect(() => {
         getArticles()
@@ -29,18 +31,16 @@ const MainNews = () => {
     return (
         <div>
             <div>
-                <p>READ TOP STORY</p>
-                {/* <img src={news[0].urlToImage} />
+                <div class="w-11  overflow-hidden">
+                    <div class=" h-16  bg-dark-red rotate-45 transform origin-top-right"></div>
+                </div>
+                <p><span className='text-dark-red'>READ</span> TOP STORY</p>
+                {/* <img alt='news-related' src={news[0].urlToImage} />
                 <p>{news[0].title}</p>
                 <p>By {news[0].author}</p> */}
             </div>
             <div>
                 <p>READ FEATURED</p>
-                {/* <FeaturedNews news={news[1]} />
-                <FeaturedNews news={news[2]} />
-                <FeaturedNews news={news[3]} />
-                <FeaturedNews news={news[4]} />
-                <FeaturedNews news={news[5]} /> */}
             </div>
         </div>
     )
