@@ -9,7 +9,7 @@ const { REACT_APP_API_KEY } = process.env;
 
 
 const MainNews = () => {
-    const [news, setNews] = useState({});
+    const [news, setNews] = useState([]);
 
     const getArticles = async () => {
         axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${REACT_APP_API_KEY}`)
@@ -35,9 +35,9 @@ const MainNews = () => {
                     <div class=" h-16  bg-dark-red rotate-45 transform origin-top-right"></div>
                 </div>
                 <p><span className='text-dark-red'>READ</span> TOP STORY</p>
-                {/* <img alt='news-related' src={news[0].urlToImage} />
-                <p>{news[0].title}</p>
-                <p>By {news[0].author}</p> */}
+                <img alt='news-related' src={news[0]?.urlToImage} />
+                <p>{news[0]?.title}</p>
+                <p>By {news[0]?.author}</p>
             </div>
             <div>
                 <p>READ FEATURED</p>
