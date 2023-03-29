@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { NewsContext } from '../App';
 import redTriangle from '../red-triangle.png';
 import LatestVideoCard from './LatestVideoCard';
+import { BsArrowRight } from 'react-icons/bs'
 
 const WatchLatest = () => {
     const { newsGlobal } = useContext(NewsContext);
@@ -22,7 +23,10 @@ const WatchLatest = () => {
                 <LatestVideoCard newsGlobal={newsGlobal[11]} />
                 <LatestVideoCard newsGlobal={newsGlobal[12]} />
             </div>
-
+            <div className='flex justify-center items-center pb-7'>
+                <button className='px-2 text-md font-md text-light-gray-text'>VIEW ALL</button>
+                <BsArrowRight className='text-light-gray-text' />
+            </div>
         </div>
     )
 }
