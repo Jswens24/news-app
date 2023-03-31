@@ -14,7 +14,7 @@ const MainNews = () => {
     const { newsGlobal, setNewsGlobal } = useContext(NewsContext)
 
     const getArticles = async () => {
-        axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${REACT_APP_API_KEY}`)
+        axios.get(`https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=${REACT_APP_API_KEY}`)
             .then(res => {
                 setNewsGlobal(res.data.articles);
                 // console.log(res.data.articles);

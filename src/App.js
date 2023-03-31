@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import MainNews from './components/MainNews';
 import WatchLatest from './components/WatchLatest';
 import MoreNews from './components/MoreNews';
+import DiscussLatest from './components/DiscussLatest';
 
 const NewsContext = createContext()
 
@@ -19,6 +20,7 @@ function App() {
         <MainNews />
         <WatchLatest />
         <MoreNews />
+        <DiscussLatest />
       </NewsContext.Provider>
     </div>
   );
