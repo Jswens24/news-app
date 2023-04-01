@@ -1,10 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-
-const MoreNewsCard = ({ newsGlobal }) => {
-
+const LongListNewsCard = ({ newsGlobal }) => {
     return (
-        <div className='px-2 w-auto'>
+        <div className='px-2 pb-5 w-64'>
             <img className='h-40 w-72 max-w-none' alt='news' src={newsGlobal?.urlToImage} />
             <div className='text-left'>
                 <p className='text-base font-medium pt-2'>{newsGlobal?.title}</p>
@@ -12,6 +10,6 @@ const MoreNewsCard = ({ newsGlobal }) => {
             </div>
         </div>
     )
-};
+}
 
-export default MoreNewsCard;
+export default LongListNewsCard

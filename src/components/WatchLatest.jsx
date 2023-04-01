@@ -8,7 +8,7 @@ const WatchLatest = () => {
     const { newsGlobal } = useContext(NewsContext);
 
     return (
-        <div className='bg-dark-gray-div mt-10 text-white pt-16 px-20'>
+        <div className='bg-dark-gray-div mt-10 text-white pt-12 px-20'>
             <div className='flex  font-light'>
                 <img className='h-3 inline' src={redTriangle} />
                 <p><span className='text-dark-red'>WATCH</span> LATEST</p>

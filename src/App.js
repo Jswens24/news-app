@@ -5,6 +5,7 @@ import MainNews from './components/MainNews';
 import WatchLatest from './components/WatchLatest';
 import MoreNews from './components/MoreNews';
 import DiscussLatest from './components/DiscussLatest';
+import LongListNews from './components/LongListNews';
 
 const NewsContext = createContext()
 
@@ -21,6 +22,7 @@ function App() {
         <WatchLatest />
         <MoreNews />
         <DiscussLatest />
+        <LongListNews />
       </NewsContext.Provider>
     </div>
   );

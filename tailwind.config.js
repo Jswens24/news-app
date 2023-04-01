@@ -9,7 +9,8 @@ module.exports = {
         'dark-gray': '#272727',
         'dark-gray-div': '#2E2D30',
         'dark-red': '#B33828',
-        'light-gray-text': '#949494'
+        'light-gray-text': '#949494',
+        'more-stories': '#666666'
       },
     },
   },
