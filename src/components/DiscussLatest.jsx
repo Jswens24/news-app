@@ -6,7 +6,7 @@ import DiscussLatestCard from './DiscussLatestCard';
 
 const DiscussLatest = () => {
     const { newsGlobal } = useContext(NewsContext);
-    console.log(newsGlobal);
+    // console.log(newsGlobal);
 
     return (
         <div className='bg-dark-gray-div mt-10 text-white pt-12 px-20'>

@@ -1,6 +1,7 @@
 import React from 'react';
 import newsLogo from '../JESSICA-NEWS10.png'
 import { MdSearch } from 'react-icons/md'
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -9,7 +10,9 @@ const NavBar = () => {
                 <p className='text-white pr-2 font-light'>Build the future you want to see.</p>
                 <a className='text-red-600 underline font-bold' target='_blank' href='https://www.lego.com/en-us'>Learn More.</a></div>
             <div className='bg-dark-gray text-white flex h-16 justify-around items-center relative'>
-                <img src={newsLogo} />
+                <NavLink to='/' >
+                    <img src={newsLogo} />
+                </NavLink>
                 <nav className='flex justify-around w-80'>
                     <a className='font-light' href=''>Listen</a>
                     <a className='font-light' href=''>Read</a>

@@ -1,13 +1,10 @@
 import { createContext, useContext, useState } from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
-import MainNews from './components/MainNews';
-import WatchLatest from './components/WatchLatest';
-import MoreNews from './components/MoreNews';
-import DiscussLatest from './components/DiscussLatest';
-import LongListNews from './components/LongListNews';
+import { Route, Routes } from 'react-router-dom';
+import DetailNews from './components/DetailNews';
+import Home from './components/Home';
 
-const NewsContext = createContext()
+const NewsContext = createContext();
 
 function App() {
   const [newsGlobal, setNewsGlobal] = useState('');
@@ -17,12 +14,10 @@ function App() {
   return (
     <div className="App">
       <NewsContext.Provider value={{ newsGlobal, setNewsGlobal }}>
-        <NavBar />
-        <MainNews />
-        <WatchLatest />
-        <MoreNews />
-        <DiscussLatest />
-        <LongListNews />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/detailNews/:id' element={<DetailNews />} />
+        </Routes>
       </NewsContext.Provider>
     </div>
   );
