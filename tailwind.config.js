@@ -10,7 +10,9 @@ module.exports = {
         'dark-gray-div': '#2E2D30',
         'dark-red': '#B33828',
         'light-gray-text': '#949494',
-        'more-stories': '#666666'
+        'more-stories': '#666666',
+        'facebook-blue': '#3A5998',
+        'twitter-blue': '#56ACED'
       },
     },
   },
